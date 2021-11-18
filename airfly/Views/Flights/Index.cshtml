@@ -1,0 +1,162 @@
+﻿@model IEnumerable<airfly.Models.Flight>
+
+@{
+    ViewData["Title"] = "Index";
+
+}
+<style>
+    @@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-family: 'Roboto', sans-serif;
+        background-color: #adacac;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    .header_fixed {
+        height: 700px;
+        overflow: auto;
+        margin-top: 30px;
+        border: 1px solid #dddddd
+    }
+
+        .header_fixed thead th {
+            position: sticky;
+            top: 0;
+            background-color: black;
+            color: #E6E7E8;
+            font-size: 15px;
+        }
+
+
+    th, td {
+        border-bottom: 1px solid #dddddd;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+        td img {
+            height: 60px;
+            width: 60px;
+            border: 5px solid #E6E7E8;
+            border-radius: 100%;
+        }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #EDEEF1;
+    }
+
+    tr:hover td {
+        color: #44b478;
+        cursor: pointer;
+        background-color: #FFFFFF;
+    }
+
+    tr button {
+        border: none;
+        padding: 7px 20px;
+        border-radius: 20px;
+        background-color: black;
+        color: #E6E7E8;
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: insert 0 0 rgba(0,0,0,3);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        -webkit-box-shadow: insert 0 0 rgba(0,0,0,3);
+    }
+
+    a {
+        color: inherit;
+    }
+</style>
+
+
+<h1>Index</h1>
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+}
+<body background="https://anba.com.br/wp-content/uploads/2020/07/emiratesboeing777-300er.png">
+
+    @if (Model.Count() > 0)
+    {
+        <div style="padding-top:45px" class="header_fixed">
+
+
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th>Logo</th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.source)
+                        </th>
+                        <th> @Html.DisplayNameFor(model => model.destination) </th>
+                        <th> @Html.DisplayNameFor(model => model.Airplane) </th>
+                        <th> @Html.DisplayNameFor(model => model.departure) </th>
+                        <th>@Html.DisplayNameFor(model => model.date)</th>
+                        <th> @Html.DisplayNameFor(model => model.type) </th>
+                        <th> @Html.DisplayNameFor(model => model.price) </th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                @foreach (var item in Model)
+                {
+                    <tbody>
+                        <tr>
+                            <td><img src="https://cdn-icons-png.flaticon.com/128/158/158225.png"></td>
+                            <td> @Html.DisplayFor(modelItem => item.source) </td>
+                            <td> @Html.DisplayFor(modelItem => item.destination) </td>
+                            <td> @Html.DisplayFor(modelItem => item.Airplane) </td>
+                            <td> @Html.DisplayFor(modelItem => item.departure) </td>
+                            <td> @Html.DisplayFor(modelItem => item.date) </td>
+                            <td> @Html.DisplayFor(modelItem => item.type) </td>
+                            <td> @Html.DisplayFor(modelItem => item.price) </td>
+                            @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                            {
+                                <td> @Html.ActionLink("Edit", "Edit", new { id = item.Id }) | @Html.ActionLink("Delete", "Delete", new { id = item.Id }) </td>
+                            }
+                            else
+                            {
+                                <td><div class="btn btn-secondary btn-sm" style="border-radius:25px;color:black"> @Html.ActionLink("Details", "Details", new { id = item.Id })</div></td>
+                            }
+                        </tr>
+                    </tbody>
+                }
+
+
+
+            </table>
+        </div>
+    }
+    else
+    {
+        <h3>No Flights Are available</h3>
+    }
+
+    </body>

@@ -1,0 +1,502 @@
+﻿
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>complete responsive tour and travel agency website design tutorial</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="~/css/site.css">
+
+</head>
+
+
+<body>
+    <section class="home" id="home">
+
+        <div class="content">
+            <h1>AirFly</h1>
+            <p>Find your wind & Take flight</p>
+            <a href="#" class="btn">Book Now</a>
+        </div>
+
+
+
+        <div class="video-container">
+            <video src="https://vediostorage.blob.core.windows.net/vedios/vid-1.mp4" id="video-slider" loop autoplay muted></video>
+
+        </div>
+
+    </section>
+    <section class="book" id="book">
+
+        <h1 class="heading">
+            <span>b</span>
+            <span>o</span>
+            <span>o</span>
+            <span>k</span>
+            <span class="space"></span>
+            <span>n</span>
+            <span>o</span>
+            <span>w</span>
+        </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="https://vediostorage.blob.core.windows.net/svgs/book-img.svg" alt="">
+            </div>
+
+
+            @using (Html.BeginForm("Search", "Flights"))
+            {
+                <form method="post">
+                    <div class="inputBox">
+                        <label for="source" class="control-label col-md-2" style="font-size: 1.7rem;"> From</label>
+                        <input required type="text" id="source" name="source" class="form-control">
+                    </div>
+                    <div class="inputBox">
+                        <label for="des" class="control-label col-md-2" style="font-size: 1.7rem;">To</label>
+                        <input required type="text" id="des" name="des" class="form-control">
+                    </div>
+                    <div class="inputBox">
+                        <label for="dep" class="control-label col-md-2" style="font-size: 1.7rem;">Departure</label>
+                        <input required type="date" id="dep" name="dep" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-success" id="btn" value="Search">
+                    </div>
+                </form>
+            }
+        </div>
+
+    </section>
+    <section class="packages" id="packages">
+
+        <h1 class="heading">
+            <span>o</span>
+            <span>f</span>
+            <span>f</span>
+            <span>e</span>
+            <span>r</span>
+            <!--  <span>g</span>
+              <span>e</span>    -->
+            <span>s</span>
+        </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="https://vediostorage.blob.core.windows.net/images/p-1.jpg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> Hyderabad to mumbai </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> 30,000 <span>40,000</span> </div>
+                    <a href="#book" class="btn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="https://vediostorage.blob.core.windows.net/images/p-2.jpg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> India to hawaii </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> 2,00,000 <span>2,50,000</span> </div>
+                    <a href="#book" class="btn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="https://vediostorage.blob.core.windows.net/images/p-3.jpg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> india to sydney </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> 2,50,000 <span>3,00,000</span> </div>
+                    <a href="#book" class="btn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="https://vediostorage.blob.core.windows.net/images/p-4.jpg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> india to paris </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> 1,75,000<span>2,00,000</span> </div>
+                    <a href="#book" class="btn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="https://vediostorage.blob.core.windows.net/images/p-5.jpg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> india to tokyo </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> 1,50,000<span>1,75,000</span> </div>
+                    <a href="#book" class="btn">book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="https://vediostorage.blob.core.windows.net/images/p-6.jpg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> Hyderabad to Goa </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price"> 30,000 <span>40,000</span> </div>
+                    <a href="#book" class="btn">book now</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="services" id="services">
+
+        <h1 class="heading">
+            <span>s</span>
+            <span>e</span>
+            <span>r</span>
+            <span>v</span>
+            <span>i</span>
+            <span>c</span>
+            <span>e</span>
+            <span>s</span>
+        </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-hotel"></i>
+                <h3>affordable hotels</h3>
+                <p>Coming Soon..</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-utensils"></i>
+                <h3>food and drinks</h3>
+                <p>First-class passengers on flights under one hour must request drinks. Those on flights over one hour will receive a snack bag with water and a sanitizer wipe. </p>
+            </div>
+            <div class="box">
+                <i class="fas fa-bullhorn"></i>
+                <h3>safty guide</h3>
+                <p>Huge amounts of money and training are involved in certifying aircrew members to ensure your safety as a passenger on board a plane.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-globe-asia"></i>
+                <h3>around the world</h3>
+                <p> At Around the World Travel we make our clients' lives easy while creating magic and memories throughout their vacations sure to last a lifetime. </p>
+            </div>
+            <div class="box">
+                <i class="fas fa-plane"></i>
+                <h3>fastest travel</h3>
+                <p>If you want to reach a destination that is quite far away from your city, a flight will let you reach faster than any other mode of travel.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-hiking"></i>
+                <h3>Comfort</h3>
+                <p>Comfort Class seats are equipped with a USB port and a power outlet for charging laptops and mobile devices, an individual lighting system and a tray table.</p>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- gallery section starts  -->
+
+    <section class="gallery" id="gallery">
+
+        <h1 class="heading">
+            <span>g</span>
+            <span>a</span>
+            <span>l</span>
+            <span>l</span>
+            <span>e</span>
+            <span>r</span>
+            <span>y</span>
+        </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="https://vediostorage.blob.core.windows.net/images/g-1.jpg" alt="">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://vediostorage.blob.core.windows.net/images/g-2.jpg" alt="">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://vediostorage.blob.core.windows.net/images/g-3.jpg" alt="">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://vediostorage.blob.core.windows.net/images/g-4.jpg" alt="">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://vediostorage.blob.core.windows.net/images/g-5.jpg" alt="">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://vediostorage.blob.core.windows.net/images/g-6.jpg" alt="">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://vediostorage.blob.core.windows.net/images/g-7.jpg" alt="">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://vediostorage.blob.core.windows.net/images/g-8.jpg" alt="">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://vediostorage.blob.core.windows.net/images/g-9.jpg" alt="">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- review section starts  -->
+
+    <section class="review" id="review">
+
+        <h1 class="heading">
+            <span>r</span>
+            <span>e</span>
+            <span>v</span>
+            <span>i</span>
+            <span>e</span>
+            <span>w</span>
+        </h1>
+        <div>
+            <div class="swiper-container review-slider">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <img src="https://vediostorage.blob.core.windows.net/images/pic1.png" alt="">
+                            <h3>Sophie</h3>
+                            <p>Congratulations @@AirFly for concluding 50k flights since the lockdown strictures were eased. Leading the way in the skies and on the ground but from a distance. #LeanCleanFlyingMachine</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <img src="https://vediostorage.blob.core.windows.net/images/pic2.png" alt="">
+                            <h3>Tim Ellis</h3>
+                            <p>Thank you so much @@AirFly staff with rest crew for assisting my mom who was very nervous to fly during this pandemic on flight. But the crew and the staff offered the best of the services #Kudos</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <img src="https://vediostorage.blob.core.windows.net/images/pic3.png" alt="">
+                            <h3>Trang kim</h3>
+                            <p>Hi @@AirFly your staff at Chennai Airport both Mahesh & Sweatha are absolutely fantastic! I wish all airline staff would be so full of zest & cheerful in such difficult times</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <img src="https://vediostorage.blob.core.windows.net/images/pic4.png" alt="">
+                            <h3>john deo</h3>
+                            <p>@@AirFly just want to thank you for your extremely user friendly website, I could change my travel date within minutes without any hassle. Keep up the good work (cheers!)</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- contact section starts  -->
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading">
+            <span>c</span>
+            <span>o</span>
+            <span>n</span>
+            <span>t</span>
+            <span>a</span>
+            <span>c</span>
+            <span>t</span>
+        </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="https://vediostorage.blob.core.windows.net/images/contact-img.svg" alt="">
+            </div>
+
+            <form action="">
+                <div class="inputBox">
+                    <input type="text" placeholder="name" id="text1">
+                    <input type="email" placeholder="email" id="text2">
+                </div>
+                <div class="inputBox">
+                    <input type="number" placeholder="number" id="text3">
+                    <input type="text" placeholder="subject" id="text4">
+                </div>
+                <textarea placeholder="message" name="" id="text5" cols="30" rows="10" ></textarea>
+                <input type="submit" class="btn" value="send message" onclick="CallLogicApp()">
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- contact section ends -->
+    <!-- gallery section ends -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+</body>
+</html>
+<script>
+    function CallLogicApp() {
+        
+        var name = document.getElementById("text1").value;
+        var email = document.getElementById("text2").value;
+        var number = document.getElementById("text3").value;
+        var subject = document.getElementById("text4").value;
+        var message = document.getElementById("text5").value;
+        console.log(name);
+        var contactdetails =
+        {
+            name: name,
+            email: email,
+            number: number,
+            subject: subject,
+            message: message
+        };
+
+        var url = "https://prod-61.eastus.logic.azure.com:443/workflows/0b75b563b00d4bbeb3241ae2f3ebc250/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=YTOHgOIVIGGWORRW0IMOLc51FA3aWs6E5cyqFnmS_CA";
+
+        var http = new XMLHttpRequest();
+        http.open('POST', url, false);
+
+        //Send the proper header information along with the request
+        http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+        http.onreadystatechange = function () {//Call a function when the state changes.
+            if (http.readyState == 4 && http.status == 200) {
+                alert(http.responseText);
+            }
+        }
+        http.send(JSON.stringify(contactdetails));
+    }
+
+</script>
+
+
+

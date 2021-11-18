@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - airfly</title>
+    @RenderSection("Styles", false)
+    <environment names="Development">
+        <link rel="stylesheet" href="../CSS/StyleSheet.css" />
+    </environment>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="~/css/StyleSheet.css">
+</head>
+
+    <body>
+        <header>
+
+            <div id="menu-bar" class="fas fa-bars"></div>
+            @*@Html.ActionLink("AirFly", "Index", "Home", new { area = "" }, new { @class = "logo" })*@
+
+            <a href="/Home" class="logo">Air<span>F</span>ly</a>
+
+            <nav class="navbar">
+                <a href="/Home">home</a>
+                <a href="#book">book</a>
+                <a href="#packages">offers</a>
+                <a href="#services">services</a>
+                <a href="#gallery">gallery</a>
+                <a href="#review">review</a>
+                <a href="#contact">contact</a>
+                <partial name="_LoginPartial"/>
+            </nav>
+
+            @*<div class="icons">
+                <i class="fas fa-search" id="search-btn"></i>
+                <i class="fas fa-user" id="login-btn">
+
+                </i>
+            </div>*@
+
+            <form action="" class="search-bar-container">
+                <input type="search" id="search-bar" placeholder="search here...">
+                <label for="search-bar" class="fas fa-search"></label>
+            </form>
+
+        </header>
+      
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+    </body>
+</html>
